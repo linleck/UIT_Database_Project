@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/',[PageController::class, 'index']);
+Route::post('/',[PageController::class, 'store']);
+Route::get('/test', function () {
 
-Route::get('/', function () {
-    return view('welcome');
 });
